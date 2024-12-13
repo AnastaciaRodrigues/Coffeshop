@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D9C5B4; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    font-size: 1.2rem; /* Tamanho padrão da fonte */
+}
+
+header {
+    background-color: #e0d9c7; /* Cor do cabeçalho */
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.nav-links {
+    display: flex;                     /* Usar flexbox para disposição horizontal */
+    justify-content: center;           /* Centraliza os itens na barra de navegação */
+    list-style: none;                  /* Remove os marcadores da lista */
+    padding: 0;                        /* Remove o padding padrão */
+    margin: 20px 0;                   /* Margem superior e inferior */
+    background-color: #FFCC80;        /* Cor de fundo da barra de navegação */
+    border-radius: 10px;              /* Bordas arredondadas */
+}
+
+.nav-links li {
+    margin: 0 15px;                   /* Espaçamento entre os itens */
+}
+
+.nav-links a {
+    text-decoration: none;              /* Remove o sublinhado dos links */
+    color: #8B4513;                    /* Cor do texto do link */
+    padding: 10px 15px;                /* Espaçamento interno dos links */
+    border-radius: 5px;                /* Bordas arredondadas para os links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+
+    /* Efeito de hover */
+    &:hover {
+        background-color: #8B4513;     /* Cor de fundo ao passar o mouse */
+        color: #fff;                   /* Cor do texto ao passar o mouse */
+    }
+}
+
+.nav-box {
+    display: flex;
+    justify-content: center; /* Centraliza os links de navegação */
+    background-color: #FFCC80; /* Cor da navegação */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+
+        li {
+            margin: 0 15px;
+
+            a {
+                text-decoration: none;
+                color: #A5A5A5; /* Cor do link */
+                padding: 10px 15px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: #8B4513; /* Cor ao passar o mouse */
+                    color: #fff; /* Cor do texto ao passar o mouse */
+                }
+            }
+        }
+    }
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap; /* Permitir quebra de linha */
+    justify-content: center; /* Centralizar produtos */
+    margin: 20px;
+
+    .produto {
+        background-color: #FFCC80; /* Fundo do produto */
+        border-radius: 10px;
+        padding: 20px;
+        margin: 15px;
+        text-align: center;
+        width: 250px; /* Largura fixa */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+
+        img {
+            width: 100%; /* Imagem ocupa toda a largura */
+            border-radius: 10px; /* Bordas arredondadas */
+        }
+
+        h3 {
+            font-size: 1.8rem; /* Tamanho do título */
+            color: #8B4513; /* Cor do título */
+        }
+
+        button {
+            background-color: #8B4513; /* Cor do botão */
+            color: white;
+            padding: 12px 20px; /* Espaçamento interno */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #5B3A1E; /* Cor ao passar o mouse */
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+footer h3 {
+    margin: 10px 0;
+}
+
+footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+.main-image {
+    display: block;         /* Faz a imagem se comportar como um bloco */
+    max-width: 100%;      /* Largura máxima da imagem */
+    height: auto;         /* Mantém a proporção da imagem */
+    margin: 20px auto;    /* Centraliza a imagem com margens superior e inferior */
+    border-radius: 10px;  /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+}
+.container {
+    display: flex;                /* Ativa o Flexbox */
+    justify-content: center;      /* Centraliza horizontalmente */
+    align-items: center;          /* Centraliza verticalmente */
+    height: 25vh;                /* Define a altura do contêiner */
+}
+.header-buttons {
+    position: absolute; /* Posiciona o elemento em relação ao contêiner pai */
+    top: 20px;         /* Distância do topo */
+    right: 20px;       /* Distância da direita */
+}
+
+body {
+    margin: 2; /* Remove margens padrão do body */
+    height: 10vh; /* Altura total da viewport */
+}
+
+.container {
+    display: flex;                  /* Ativa o Flexbox no contêiner */
+    justify-content: center;        /* Centraliza horizontalmente */
+    align-items: center;            /* Centraliza verticalmente */
+    height: 100%;                   /* Altura do contêiner igual à altura do body */
+}
+
+.delta {
+    animation: rotate-fade 5s infinite; /* Chama a animação */
+}
+
+.delta img {
+    width: 100px; /* Tamanho pequeno da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Animação para girar e desvanecer */
+@keyframes rotate-fade {
+    0% {
+        opacity: 0; /* Começa invisível */
+        transform: rotate(0deg); /* Começa sem rotação */
+    }
+    50% {
+        opacity: 1; /* Fica visível */
+        transform: rotate(180deg); /* Gira 180 graus */
+    }
+    100% {
+        opacity: 0; /* Volta a ficar invisível */
+        transform: rotate(360deg); /* Gira 360 graus */
+    }
+}
